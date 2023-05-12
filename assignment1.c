@@ -17,16 +17,16 @@ int main(void) {
     while (finish) {
         numCount++;
 
-        if (numCount > 30) {
+        if (numCount > 31) {
+            printf("numCount: %d\n",numCount);
             printf("입력 가능한 숫자의 개수를 초과했습니다.\n");
             break;
         }
 
         scanf("%1c", &c1);
         int digit = c1 - '0';
-        //printf("%d\n", digit);
+        printf("%d\n", digit);
         if (c1 != '+' && digit >= 0 && digit < 10) {
-            // 문자를 숫자로 변환
             switch (numCount) {
                 case 1:
                     num1 = digit;
@@ -105,6 +105,7 @@ int main(void) {
                     break;
                 case 11:
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -118,6 +119,7 @@ int main(void) {
                 case 12:
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -132,6 +134,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -147,6 +150,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -163,6 +167,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -180,6 +185,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -199,6 +205,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -218,6 +225,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -238,6 +246,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -259,6 +268,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -281,6 +291,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -304,6 +315,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -328,6 +340,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -353,6 +366,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -379,6 +393,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -406,6 +421,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -434,6 +450,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -463,6 +480,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -493,6 +511,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -524,6 +543,7 @@ int main(void) {
                     num13 = num12;
                     num12 = num11;
                     num11 = num10;
+                    num10 = num9;
                     num9 = num8;
                     num8 = num7;
                     num7 = num6;
@@ -566,16 +586,16 @@ int main(void) {
             continue;
         }
         numCount++;
-        if (numCount > 30) {
+        if (numCount > 31) {
             printf("입력 가능한 숫자의 개수를 초과했습니다.\n");
             break;
         }
 
 
         int digit = c2 - '0'; // 문자를 숫자로 변환
-        //printf("numCount:%d, digit:%d\n",numCount,digit);
-        if (digit >= 0 && digit < 10) {
-            printf("%d\n", digit);
+        printf("numCount:%d, digit:%d\n",numCount,digit);
+        if (digit >= 0 && digit < 10 &&numCount<=30) {
+            //printf("%d\n", digit);
             switch (numCount) {
                 case 1:
                     num31 = digit;
@@ -683,6 +703,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -698,6 +719,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -714,6 +736,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -731,6 +754,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -749,6 +773,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -768,6 +793,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -788,6 +814,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -809,6 +836,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -830,6 +858,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -853,6 +882,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -877,6 +907,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -902,6 +933,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -928,6 +960,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -955,6 +988,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -983,6 +1017,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -1012,6 +1047,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -1042,6 +1078,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -1073,6 +1110,7 @@ int main(void) {
                     num43 = num42;
                     num42 = num41;
                     num41 = num40;
+                    num40 = num39;
                     num39 = num38;
                     num38 = num37;
                     num37 = num36;
@@ -1082,6 +1120,36 @@ int main(void) {
                     num33 = num32;
                     num32 = num31;
                     num31 = digit;
+                    printf("num31: %d\n", num31);
+                    printf("num32: %d\n", num32);
+                    printf("num33: %d\n", num33);
+                    printf("num34: %d\n", num34);
+                    printf("num35: %d\n", num35);
+                    printf("num36: %d\n", num36);
+                    printf("num37: %d\n", num37);
+                    printf("num38: %d\n", num38);
+                    printf("num39: %d\n", num39);
+                    printf("num40: %d\n", num40);
+                    printf("num41: %d\n", num41);
+                    printf("num42: %d\n", num42);
+                    printf("num43: %d\n", num43);
+                    printf("num44: %d\n", num44);
+                    printf("num45: %d\n", num45);
+                    printf("num46: %d\n", num46);
+                    printf("num47: %d\n", num47);
+                    printf("num48: %d\n", num48);
+                    printf("num49: %d\n", num49);
+                    printf("num50: %d\n", num50);
+                    printf("num51: %d\n", num51);
+                    printf("num52: %d\n", num52);
+                    printf("num53: %d\n", num53);
+                    printf("num54: %d\n", num54);
+                    printf("num55: %d\n", num55);
+                    printf("num56: %d\n", num56);
+                    printf("num57: %d\n", num57);
+                    printf("num58: %d\n", num58);
+                    printf("num59: %d\n", num59);
+                    printf("num60: %d\n", num60);
                     break;
                 default:
                     break;
@@ -1100,37 +1168,110 @@ int main(void) {
 
     unsigned long long result1 = 0;
     unsigned long long result2 = 0;
-    unsigned long long raise = 1;
+    //unsigned long long raise = 1;
+    /*
     printf("------------------\n");
     printf("num1:%d\n", num1);
     printf("num31:%d\n", num31);
     printf("num2:%d\n", num2);
     printf("num32:%d\n", num32);
     printf("num3:%d\n", num3);
-    printf("num33:%d\n", num33);
+    printf("num53:%d\n", num53);
+
+    printf("-----------------------\n");
+    printf("num1: %d\n", num1);
+    printf("num2: %d\n", num2);
+    printf("num3: %d\n", num3);
+    printf("num4: %d\n", num4);
+    printf("num5: %d\n", num5);
+    printf("num6: %d\n", num6);
+    printf("num7: %d\n", num7);
+    printf("num8: %d\n", num8);
+    printf("num9: %d\n", num9);
+    printf("num10: %d\n", num10);
+    printf("num11: %d\n", num11);
+    printf("num12: %d\n", num12);
+    printf("num13: %d\n", num13);
+    printf("num14: %d\n", num14);
+    printf("num15: %d\n", num15);
+    printf("num16: %d\n", num16);
+    printf("num17: %d\n", num17);
+    printf("num18: %d\n", num18);
+    printf("num19: %d\n", num19);
+    printf("num20: %d\n", num20);
+    printf("num21: %d\n", num21);
+    printf("num22: %d\n", num22);
+    printf("num23: %d\n", num23);
+    printf("num24: %d\n", num24);
+    printf("num25: %d\n", num25);
+    printf("num26: %d\n", num26);
+    printf("num27: %d\n", num27);
+    printf("num28: %d\n", num28);
+    printf("num29: %d\n", num29);
+    printf("num30: %d\n", num30);
+    printf("num31: %d\n", num31);
+    printf("num32: %d\n", num32);
+    printf("num33: %d\n", num33);
+    printf("num34: %d\n", num34);
+    printf("num35: %d\n", num35);
+    printf("num36: %d\n", num36);
+    printf("num37: %d\n", num37);
+    printf("num38: %d\n", num38);
+    printf("num39: %d\n", num39);
+    printf("num40: %d\n", num40);
+    printf("num41: %d\n", num41);
+    printf("num42: %d\n", num42);
+    printf("num43: %d\n", num43);
+    printf("num44: %d\n", num44);
+    printf("num45: %d\n", num45);
+    printf("num46: %d\n", num46);
+    printf("num47: %d\n", num47);
+    printf("num48: %d\n", num48);
+    printf("num49: %d\n", num49);
+    printf("num50: %d\n", num50);
+    printf("num51: %d\n", num51);
+    printf("num52: %d\n", num52);
+    printf("num53: %d\n", num53);
+    printf("num54: %d\n", num54);
+    printf("num55: %d\n", num55);
+    printf("num56: %d\n", num56);
+    printf("num57: %d\n", num57);
+    printf("num58: %d\n", num58);
+    printf("num59: %d\n", num59);
+    printf("num60: %d\n", num60);
+    */
 
 
+    // 계산 수행
     result1 =
             num1 + num31 + 10 * (num2 + num32) + 100 * (num3 + num33) + 1000 * (num4 + num34) + 10000 * (num5 + num35) +
             100000 * (num6 + num36) + 1000000 * (num7 + num37) + 10000000 * (num8 + num38) +
             100000000 * (num9 + num39) + 1000000000 * (num10 + num40) + 10000000000 * (num11 + num41) +
             100000000000 * (num12 + num42) + 1000000000000 * (num13 + num43) + 10000000000000 * (num14 + num44) +
             100000000000000 * (num15 + num45);
-    if (result1 >= 1000000000000000) {
-        result1 = result1 - 1000000000000000;
-        result2 += raise;
+
+    unsigned long long raise = 1000000000000000;
+
+    if (result1 >= raise) {
+        result1 = result1 - raise;
+        result2 += 1;
     }
+    printf("result2: %llu\n", result2);
     result2 += num16 + num46 + 10 * (num17 + num47) + 100 * (num18 + num48) + 1000 * (num19 + num49) +
                10000 * (num20 + num50) + 100000 * (num21 + num51) + 1000000 * (num22 + num52) +
                10000000 * (num23 + num53) + 100000000 * (num24 + num54) + 1000000000 * (num25 + num55) +
                10000000000 * (num26 + num56) + 100000000000 * (num27 + num57) + 1000000000000 * (num28 + num58) +
                10000000000000 * (num29 + num59) + 100000000000000 * (num30 + num60);
+
+    printf("result2: %llu\n", result2);
+
     if (result2 == 0) {
-        printf("case1\n");
-        printf("%llu", result1);
+        printf("Case 1\n");
+        printf("%llu\n", result1);
     } else {
-        printf("case2\n");
-        printf("%llu%llu", result2, result1);
+        printf("Case 2\n");
+        printf("%llu%llu\n", result2, result1);
     }
+
     return 0;
 }
