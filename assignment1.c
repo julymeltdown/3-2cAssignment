@@ -12,18 +12,21 @@ int main(void) {
     //피연산자들의 자리수 세기
     int op1 = 0, op2 = 0;
 
-    printf("수식을 입력하세요: ");
+    printf("수식을 입력하세요:");
 
     while (finish) {
         numCount++;
 
         if (numCount > 31) {
-            printf("numCount: %d\n",numCount);
+            printf("numCount: %d\n", numCount);
             printf("입력 가능한 숫자의 개수를 초과했습니다.\n");
             break;
         }
 
-        scanf("%1c", &c1);
+        c1 = getchar();
+        if(c1 ==' '){
+            continue;
+        }
         int digit = c1 - '0';
         printf("%d\n", digit);
         if (c1 != '+' && digit >= 0 && digit < 10) {
@@ -593,8 +596,8 @@ int main(void) {
 
 
         int digit = c2 - '0'; // 문자를 숫자로 변환
-        printf("numCount:%d, digit:%d\n",numCount,digit);
-        if (digit >= 0 && digit < 10 &&numCount<=30) {
+        printf("numCount:%d, digit:%d\n", numCount, digit);
+        if (digit >= 0 && digit < 10 && numCount <= 30) {
             //printf("%d\n", digit);
             switch (numCount) {
                 case 1:
@@ -850,6 +853,7 @@ int main(void) {
                 case 21:
                     num51 = num50;
                     num50 = num49;
+                    num49 = num48;
                     num48 = num47;
                     num47 = num46;
                     num46 = num45;
@@ -1120,36 +1124,6 @@ int main(void) {
                     num33 = num32;
                     num32 = num31;
                     num31 = digit;
-                    printf("num31: %d\n", num31);
-                    printf("num32: %d\n", num32);
-                    printf("num33: %d\n", num33);
-                    printf("num34: %d\n", num34);
-                    printf("num35: %d\n", num35);
-                    printf("num36: %d\n", num36);
-                    printf("num37: %d\n", num37);
-                    printf("num38: %d\n", num38);
-                    printf("num39: %d\n", num39);
-                    printf("num40: %d\n", num40);
-                    printf("num41: %d\n", num41);
-                    printf("num42: %d\n", num42);
-                    printf("num43: %d\n", num43);
-                    printf("num44: %d\n", num44);
-                    printf("num45: %d\n", num45);
-                    printf("num46: %d\n", num46);
-                    printf("num47: %d\n", num47);
-                    printf("num48: %d\n", num48);
-                    printf("num49: %d\n", num49);
-                    printf("num50: %d\n", num50);
-                    printf("num51: %d\n", num51);
-                    printf("num52: %d\n", num52);
-                    printf("num53: %d\n", num53);
-                    printf("num54: %d\n", num54);
-                    printf("num55: %d\n", num55);
-                    printf("num56: %d\n", num56);
-                    printf("num57: %d\n", num57);
-                    printf("num58: %d\n", num58);
-                    printf("num59: %d\n", num59);
-                    printf("num60: %d\n", num60);
                     break;
                 default:
                     break;
@@ -1165,9 +1139,6 @@ int main(void) {
 
 
     // 덧셈
-
-    unsigned long long result1 = 0;
-    unsigned long long result2 = 0;
     //unsigned long long raise = 1;
     /*
     printf("------------------\n");
@@ -1177,7 +1148,7 @@ int main(void) {
     printf("num32:%d\n", num32);
     printf("num3:%d\n", num3);
     printf("num53:%d\n", num53);
-
+    */
     printf("-----------------------\n");
     printf("num1: %d\n", num1);
     printf("num2: %d\n", num2);
@@ -1239,39 +1210,258 @@ int main(void) {
     printf("num58: %d\n", num58);
     printf("num59: %d\n", num59);
     printf("num60: %d\n", num60);
-    */
 
 
-    // 계산 수행
-    result1 =
-            num1 + num31 + 10 * (num2 + num32) + 100 * (num3 + num33) + 1000 * (num4 + num34) + 10000 * (num5 + num35) +
-            100000 * (num6 + num36) + 1000000 * (num7 + num37) + 10000000 * (num8 + num38) +
-            100000000 * (num9 + num39) + 1000000000 * (num10 + num40) + 10000000000 * (num11 + num41) +
-            100000000000 * (num12 + num42) + 1000000000000 * (num13 + num43) + 10000000000000 * (num14 + num44) +
-            100000000000000 * (num15 + num45);
+    printf("-----------------------\n");
+    int raise = 0;
+    int sum1 = 0, sum2 = 0, sum3 = 0, sum4 = 0, sum5 = 0, sum6 = 0, sum7 = 0, sum8 = 0, sum9 = 0, sum10 = 0, sum11 = 0, sum12 = 0, sum13 = 0, sum14 = 0, sum15 = 0,
+            sum16 = 0, sum17 = 0, sum18 = 0, sum19 = 0, sum20 = 0, sum21 = 0, sum22 = 0, sum23 = 0, sum24 = 0, sum25 = 0, sum26 = 0, sum27 = 0, sum28 = 0, sum29 = 0, sum30 = 0;
 
-    unsigned long long raise = 1000000000000000;
-
-    if (result1 >= raise) {
-        result1 = result1 - raise;
-        result2 += 1;
+    sum1 = num1 + num31;
+    printf("sum1: %d+%d=%d\n", num1, num31, sum1);
+    if (sum1 >= 10) {
+        sum1 = sum1 - 10;
+        raise = 1;
     }
-    printf("result2: %llu\n", result2);
-    result2 += num16 + num46 + 10 * (num17 + num47) + 100 * (num18 + num48) + 1000 * (num19 + num49) +
-               10000 * (num20 + num50) + 100000 * (num21 + num51) + 1000000 * (num22 + num52) +
-               10000000 * (num23 + num53) + 100000000 * (num24 + num54) + 1000000000 * (num25 + num55) +
-               10000000000 * (num26 + num56) + 100000000000 * (num27 + num57) + 1000000000000 * (num28 + num58) +
-               10000000000000 * (num29 + num59) + 100000000000000 * (num30 + num60);
-
-    printf("result2: %llu\n", result2);
-
-    if (result2 == 0) {
-        printf("Case 1\n");
-        printf("%llu\n", result1);
+    sum2 = num2 + num32 + raise;
+    printf("sum2: %d+%d=%d\n", num2, num32, sum2);
+    if (sum2 >= 10) {
+        sum2 = sum2 - 10;
+        raise = 1;
     } else {
-        printf("Case 2\n");
-        printf("%llu%llu\n", result2, result1);
+        raise = 0;
     }
+    sum3 = num3 + num33 + raise;
+    printf("sum3: %d+%d=%d\n", num3, num33, sum3);
+    if (sum3 >= 10) {
+        sum3 = sum3 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum4 = num4 + num34 + raise;
+    printf("sum4: %d+%d=%d\n", num4, num34, sum4);
+    if (sum4 >= 10) {
+        sum4 = sum4 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum5 = num5 + num35 + raise;
+    printf("sum5: %d+%d=%d\n", num5, num35, sum5);
+    if (sum5 >= 10) {
+        sum5 = sum5 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum6 = num6 + num36 + raise;
+    printf("sum6: %d+%d=%d\n", num6, num36, sum6);
+    if (sum6 >= 10) {
+        sum6 = sum6 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum7 = num7 + num37 + raise;
+    printf("sum7: %d+%d=%d\n", num7, num37, sum7);
+    if (sum7 >= 10) {
+        sum7 = sum7 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum8 = num8 + num38 + raise;
+    printf("sum8: %d+%d=%d\n", num8, num38, sum8);
+    if (sum8 >= 10) {
+        sum8 = sum8 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum9 = num9 + num39 + raise;
+    printf("sum9: %d+%d=%d\n", num9, num39, sum9);
+    if (sum9 >= 10) {
+        sum9 = sum9 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum10 = num10 + num40 + raise;
+    printf("sum10: %d+%d=%d\n", num10, num40, sum10);
+    if (sum10 >= 10) {
+        sum10 = sum10 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum11 = num11 + num41 + raise;
+    printf("sum11: %d+%d=%d\n", num11, num41, sum11);
+    if (sum11 >= 10) {
+        sum11 = sum11 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum12 = num12 + num42 + raise;
+    printf("sum12: %d+%d=%d\n", num12, num42, sum12);
+    if (sum12 >= 10) {
+        sum12 = sum12 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum13 = num13 + num43 + raise;
+    printf("sum13: %d+%d=%d\n", num13, num43, sum13);
+    if (sum13 >= 10) {
+        sum13 = sum13 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum14 = num14 + num44 + raise;
+    printf("sum14: %d+%d=%d\n", num14, num44, sum14);
+    if (sum14 >= 10) {
+        sum14 = sum14 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum15 = num15 + num45 + raise;
+    printf("sum15: %d+%d=%d\n", num15, num45, sum15);
+    if (sum15 >= 10) {
+        sum15 = sum15 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum16 = num16 + num46 + raise;
+    printf("sum16: %d+%d=%d\n", num16, num46, sum16);
+    if (sum16 >= 10) {
+        sum16 = sum16 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum17 = num17 + num47 + raise;
+    printf("sum17: %d+%d=%d\n", num17, num47, sum17);
+    if (sum17 >= 10) {
+        sum17 = sum17 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+
+    }
+    sum18 = num18 + num48 + raise;
+    printf("sum18: %d+%d=%d\n", num18, num48, sum18);
+    if (sum18 >= 10) {
+        sum18 = sum18 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+
+    sum19 = num19 + num49 + raise;
+    printf("sum19: %d+%d=%d\n", num19, num49, sum19);
+    if (sum19 >= 10) {
+        sum19 = sum19 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum20 = num20 + num50 + raise;
+    printf("sum20: %d+%d=%d\n", num20, num50, sum20);
+    if (sum20 >= 10) {
+        sum20 = sum20 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum21 = num21 + num51 + raise;
+    printf("sum21: %d+%d=%d\n", num21, num51, sum21);
+    if (sum21 >= 10) {
+        sum21 = sum21 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum22 = num22 + num52 + raise;
+    printf("sum22: %d+%d=%d\n", num22, num52, sum22);
+    if (sum22 >= 10) {
+        sum22 = sum22 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum23 = num23 + num53 + raise;
+    printf("sum23: %d+%d=%d\n", num23, num53, sum23);
+    if (sum23 >= 10) {
+        sum23 = sum23 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum24 = num24 + num54 + raise;
+    printf("sum1: %d+%d=%d\n", num24, num54, sum24);
+    if (sum24 >= 10) {
+        sum24 = sum24 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum25 = num25 + num55 + raise;
+    printf("sum25: %d+%d=%d\n", num25, num55, sum25);
+    if (sum25 >= 10) {
+        sum25 = sum25 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum26 = num26 + num56 + raise;
+    printf("sum26: %d+%d=%d\n", num26, num56, sum26);
+    if (sum26 >= 10) {
+        sum26 = sum26 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum27 = num27 + num57 + raise;
+    printf("sum27: %d+%d=%d\n", num27, num57, sum27);
+    if (sum27 >= 10) {
+        sum27 = sum27 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum28 = num28 + num58 + raise;
+    printf("sum28: %d+%d=%d\n", num28, num58, sum28);
+    if (sum28 >= 10) {
+        sum28 = sum28 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum29 = num29 + num59 + raise;
+    printf("sum29: %d+%d=%d\n", num29, num59, sum29);
+    if (sum29 >= 10) {
+        sum29 = sum29 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    sum30 = num30 + num60 + raise;
+    printf("sum30: %d+%d=%d\n", num30, num60, sum30);
+    if (sum30 >= 10) {
+        sum30 = sum30 - 10;
+        raise = 1;
+    } else {
+        raise = 0;
+    }
+    printf("%d%d%d,%d%d%d,%d%d%d,%d%d%d,%d%d%d,%d%d%d,%d%d%d,%d%d%d,%d%d%d,%d%d%d", sum30, sum29, sum28, sum27, sum26,
+           sum25, sum24, sum23, sum22, sum21, sum20, sum19, sum18, sum17, sum16, sum15, sum14, sum13, sum12, sum11,
+           sum10, sum9, sum8, sum7, sum6, sum5, sum4, sum3, sum2, sum1);
 
     return 0;
 }
+
+
