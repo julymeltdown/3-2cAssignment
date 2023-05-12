@@ -17,14 +17,8 @@ int main(void) {
     while (finish) {
         numCount++;
 
-        if (numCount > 31) {
-            printf("numCount: %d\n", numCount);
-            printf("입력 가능한 숫자의 개수를 초과했습니다.\n");
-            break;
-        }
-
         c1 = getchar();
-        if(c1 ==' '){
+        if (c1 == ' ') {
             continue;
         }
         int digit = c1 - '0';
@@ -198,7 +192,6 @@ int main(void) {
                     num3 = num2;
                     num2 = num1;
                     num1 = digit;
-                    num16 = digit;
                     break;
                 case 17:
                     num17 = num16;
