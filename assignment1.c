@@ -2,10 +2,9 @@
 #include <ctype.h>
 
 int main(void) {
-    char continueAsk = 'y';
+    int counter =0;
     start:
-    while (continueAsk == 'y') {
-
+    while (1) {
         int num1 = 0, num2 = 0, num3 = 0, num4 = 0, num5 = 0, num6 = 0, num7 = 0, num8 = 0, num9 = 0, num10 = 0, num11 = 0, num12 = 0, num13 = 0, num14 = 0, num15 = 0, num16 = 0, num17 = 0, num18 = 0, num19 = 0, num20 = 0, num21 = 0, num22 = 0, num23 = 0, num24 = 0, num25 = 0, num26 = 0, num27 = 0, num28 = 0, num29 = 0, num30 = 0, num31 = 0, num32 = 0, num33 = 0, num34 = 0, num35 = 0, num36 = 0, num37 = 0, num38 = 0, num39 = 0, num40 = 0, num41 = 0, num42 = 0, num43 = 0, num44 = 0, num45 = 0, num46 = 0, num47 = 0, num48 = 0, num49 = 0, num50 = 0, num51 = 0, num52 = 0, num53 = 0, num54 = 0, num55 = 0, num56 = 0, num57 = 0, num58 = 0, num59 = 0, num60 = 0;
 
         char c1;
@@ -14,16 +13,21 @@ int main(void) {
 
         //피연산자들의 자리수 세기
         int op1 = 0, op2 = 0;
-        printf("수식: ");
+        if(counter!=0){
+            scanf("%*c");
+        }
+        printf("수식:");
 
         while (finish) {
             numCount++;
 
-            c1 = getchar();
+            scanf(" %c", &c1);
             int digit = c1 - '0';
             if (c1 == ' ') {
                 continue;
-            } else if (!isdigit(digit) && c1 != '+') {
+            }else if(!isdigit(c1)&&c1!='+'){
+                counter++;
+                printf("잘못된 연산자입니다.\n");
                 goto continueAskWhile;
             }
 
@@ -567,6 +571,7 @@ int main(void) {
                         }
                     }
                 }
+
                 numCount = 0;
                 finish = 0; // 공백 문자열이 입력되면 입력 종료
             }
@@ -1415,8 +1420,9 @@ int main(void) {
         }
         sum30 = num30 + num60 + raise;
         if (sum30 >= 10) {
-            sum30 = sum30 - 10;
-            raise = 1;
+            printf("오버플로우가 발생했습니다\n");
+            counter=1;
+            goto continueAskWhile;
         } else {
             raise = 0;
         }
@@ -1424,24 +1430,43 @@ int main(void) {
                sum26,
                sum25, sum24, sum23, sum22, sum21, sum20, sum19, sum18, sum17, sum16, sum15, sum14, sum13, sum12, sum11,
                sum10, sum9, sum8, sum7, sum6, sum5, sum4, sum3, sum2, sum1);
-
-
-
-        printf("계속 하시겠습니까? ");
-        scanf(" %c", &continueAsk);
+        counter=1;
+        char continueAsk;
+        stringContinue:
+        int charCounter =0;
         continueAskWhile:
-        if (continueAsk == 'y') {
-            goto start;
-        } else if (continueAsk == 'n') {
-            break;
-        } else {
-            goto continueAskWhile;
+        while (1) {
+            if(counter==1||charCounter==1){
+                printf("계속 하시겠습니까? ");
+                counter++;
+                charCounter++;
+            }
+
+            scanf(" %c",&continueAsk);
+            if (continueAsk == 'y') {
+                counter=0;
+                charCounter=0;
+                goto start;
+            } else if (continueAsk == 'n') {
+                break;
+            } else {
+                if(isdigit(continueAsk)){
+                    continue;
+                }
+                counter=1;
+                if(isalpha(continueAsk)||isspace(continueAsk)||((continueAsk & 0x80) != 0)){
+                    printf("korean\n");
+                    goto continueAskWhile;
+                }
+                charCounter=1;
+                continue;
+            }
         }
+        break;
 
     }
 
 
     return 0;
 }
-
 
