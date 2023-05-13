@@ -1432,20 +1432,18 @@ int main(void) {
                sum10, sum9, sum8, sum7, sum6, sum5, sum4, sum3, sum2, sum1);
         counter=1;
         char continueAsk;
-        stringContinue:
-        int charCounter =0;
         continueAskWhile:
         while (1) {
-            if(counter==1||charCounter==1){
+
+            if(counter==1){
                 printf("계속 하시겠습니까? ");
                 counter++;
-                charCounter++;
             }
 
             scanf(" %c",&continueAsk);
             if (continueAsk == 'y') {
                 counter=0;
-                charCounter=0;
+                //charCounter=0;
                 goto start;
             } else if (continueAsk == 'n') {
                 break;
@@ -1455,10 +1453,10 @@ int main(void) {
                 }
                 counter=1;
                 if(isalpha(continueAsk)||isspace(continueAsk)||((continueAsk & 0x80) != 0)){
-                    printf("korean\n");
-                    goto continueAskWhile;
+
+                    while(getchar()!='\n'){}
                 }
-                charCounter=1;
+                //charCounter=1;
                 continue;
             }
         }
