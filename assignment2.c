@@ -29,14 +29,16 @@ char charConvert(int num){
 
 
 //가위바위보 실행
+// 묵(O, 0), 찌(X, 1), 빠(#, 2) 게임
+//리턴값: 패배 0, 승리 2, 비김 1
 int game(char user, int com) {
     if (user == 'O') {
         if (com == 0) {
-            return 1; // 사용자 승
+            return 1; //비김
         } else if (com == 1) {
-            return 2; // 사용자 패
+            return 2; //
         } else {
-            return 0; // 비김
+            return 0; 
         }
     } else if (user == 'X') {
         if (com == 0) {
@@ -46,13 +48,13 @@ int game(char user, int com) {
         } else {
             return 2; // 사용자 승
         }
-    } else { // 사용자 빠
+    } else if(user=='#') { // 사용자 빠
         if (com == 0) {
-            return 1; // 사용자 승
+            return 2; // 사용자 승
         } else if (com == 1) {
             return 0; // 사용자 패
         } else {
-            return 2; // 비김
+            return 1; // 비김
         }
     }
 }
@@ -79,7 +81,7 @@ int main() {
                 printf("컴퓨터의 공격 차례입니다.\n");
                 attackPriority = 1;
                 break;
-            } else if (firstGameResult == 1) {
+            } else if (firstGameResult == 1) {비
                 printf("당신과 컴퓨터가 비겼습니다.\n");
             } else {
                 attackPriority = 0;
@@ -117,6 +119,7 @@ int main() {
                     printf("당신의 공격 차례입니다\n");
                 }
             }
+            printf("\n");
         }
 
         printf("계속 하시겠습니까?: ");
@@ -126,9 +129,8 @@ int main() {
 
         if (choice == 'n' || choice == 'N') {
             return 0;
-        }else{
-            continue;
         }
+        printf("\n");
     }
 
     return 0;
