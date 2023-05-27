@@ -81,7 +81,7 @@ int main() {
                 printf("컴퓨터의 공격 차례입니다.\n");
                 attackPriority = 1;
                 break;
-            } else if (firstGameResult == 1) {비
+            } else if (firstGameResult == 1) {
                 printf("당신과 컴퓨터가 비겼습니다.\n");
             } else {
                 attackPriority = 0;
