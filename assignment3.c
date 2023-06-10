@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 
-
 #define SIZE 20
 
 int main() {
@@ -25,7 +24,6 @@ int main() {
             89, 99, 78, 83, 92,
             71, 72, 68, 95, 76
     };
-    int forSorting[SIZE];
 
     while (1) {
         //1부터 5중의 숫자를 입력받음
@@ -129,6 +127,8 @@ int main() {
             char name[20];
             printf("이름을 입력하세요 :");
             scanf("%s", name);
+            getchar();
+            printf("\n");
             for (int i = 0; i < SIZE; i++) {
                 //반복문 돌면서 입력받은 이름과 이름이 같은지 확인
                 if (strcmp(name, names[i]) == 0) {
@@ -136,6 +136,7 @@ int main() {
                     printf("%-20s %-20d %-20d\n", names[i], studentIDs[i], scores[i]);
                 }
             }
+            printf("\n");
         }
         //5를 입력받으면 종료
         if (input == 5) {
